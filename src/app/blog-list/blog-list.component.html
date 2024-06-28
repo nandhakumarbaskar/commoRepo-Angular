@@ -1,0 +1,21 @@
+<p>blog-list works!</p>
+{{blogs | json}}
+
+<table>
+    <tr>
+        <td>title</td>
+        <td>description</td>
+        <td>isPublished</td>
+        <td>createdOn</td>
+        <td>updatedOn</td>
+        <td>edit</td>
+    </tr>
+    <tr *ngFor="let b of blogs.message">
+        <td>{{b.title}}</td>
+        <td>{{b.description}}</td>
+        <td>{{b.isPublished}}</td>
+        <td>{{b.createdAt}}</td>
+        <td>{{b.updatedAt}}</td>
+        <td><a routerLink="/blog/{{b._id}}">Edit</a></td>
+    </tr>
+</table>
